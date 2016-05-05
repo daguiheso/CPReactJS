@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Curso ReactJS</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
 	<section id="container"></section>
@@ -19,13 +20,13 @@
 		class PokeAvatar extends React.Component {
 			render() {
 				var url = `http://veekun.com/dex/media/pokemon/main-sprites/x-y/${this.props.number}.png`;
-				return <img src={url}/>
+				return <img src={url} className="avatar" />
 			}
 		}
 
 		class PokeRow extends React.Component {
 			render() {
-				return <div>
+				return <div className="pokerow">
 					<PokeAvatar number={ this.props.number }/>
 					{ this.props.name }
 				</div>
