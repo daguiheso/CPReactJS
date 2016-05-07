@@ -7,9 +7,10 @@
     "browserify": "^13.0.1",
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
-    "rect": "^1.2.1"
+    "rect": "^1.2.1",
+    "watchify": "^3.7.0"
   },
   "scripts": {
-    "build": "browserify -t [ babelify --presets [ es2015 react] ] app.js -o build.js"
+    "build": "watchify -t [ babelify --presets [ es2015 react] ] app.js -o build.js"
   }
 }
