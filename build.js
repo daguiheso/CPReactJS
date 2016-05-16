@@ -131,7 +131,12 @@ var PokeAvatar = function (_React$Component) {
 		key: "render",
 		value: function render() {
 			var url = "http://veekun.com/dex/media/pokemon/main-sprites/x-y/" + this.props.number + ".png";
-			return _react2.default.createElement("img", { src: url, className: "avatar" });
+			return _react2.default.createElement(
+				"div",
+				{ className: "avatar-container" },
+				" ",
+				_react2.default.createElement("img", { src: url, className: "avatar" })
+			);
 		}
 	}]);
 
