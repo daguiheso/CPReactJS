@@ -5,6 +5,7 @@
 import React from 'react';
 import PokeTable from './PokeTable';
 import PokeChat from './PokeChat';
+import uid from 'uid';
 
 export default class PokeApp extends React.Component {
 	constructor(props) {
@@ -15,7 +16,8 @@ export default class PokeApp extends React.Component {
 
 	onGrowl(name) {
 		let text = `${name}, ${name}!`;
-		this.state.messages.push({ text: text });
+		let message = { id: uid(), text: text }
+		this.state.messages.push(message);
 		let messages = this.state.messages;
 		this.setState({ messages: messages });
 	}
