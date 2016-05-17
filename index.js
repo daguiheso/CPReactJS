@@ -32,7 +32,7 @@ let server = http.createServer(app).listen(port, () => {
 const io = engine.listen(server);
 
 /*escuhar nuevas conexiones*/
-io.on('connection', (socket) => {  /*vamos a recibir un socket como parametro*/
+io.on('connection', (socket) => {  /*cuando suceda una conexion vamos a recibir un socket como parametro*/
 	socket.on('message', (msg) => { /*nos suscribimos al metodo message y en el vamos a recibir un msg que va a venir del lado del cliente*/
 		io.emit('message', msg)  /*lo que hacemos es emitir ese mensage a todos los clientes que esten suscritos como un evento de tipo message*/
 	})  
