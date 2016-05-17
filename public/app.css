@@ -78,3 +78,16 @@ table {
 	max-height: 75px;
 	max-width: 100px;
 }
+/* animation before show DOM */
+.message-animation-enter {
+	opacity: 0;
+	transition: opacity .5s ease-in;
+}
+/* animation after show DOM */
+.message-animation-enter.message-animation-enter-active {
+	opacity: 1;
+}
+/* animation hide element of DOM */
+.message-animation-leave {
+
+}
